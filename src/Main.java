@@ -10,9 +10,9 @@ public class Main {
         System.out.println(" ________________________________________________");
         System.out.println("| Director   | Zora         | Zora@gmail.com     |");
         System.out.println("-------------------------------------------------");
-        System.out.println("| Manager    | X-Star       | XStar@gmail.com   |");
+        System.out.println("| Manager    | KAl          |  KAL@gmail.com     |");
         System.out.println("--------------------------------------------------");
-        System.out.println("| Investor   | KAl          | KAl@gmail.com      |");
+        System.out.println("| Investor   | X-Star        | XStar@gmail.com   |");
         System.out.println(" -------------------------------------------------");
 
         while (true) {
