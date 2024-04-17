@@ -106,7 +106,7 @@ public class AirLineReservationSystem {
                 System.out.println("-------------------------------------------------------------------------------------");
                 break;
             default:
-                System.out.println("Invalid flight code.");
+                System.out.println("Invalid Plane name.");
                 return;
         }
         showControlOptions(scanner);

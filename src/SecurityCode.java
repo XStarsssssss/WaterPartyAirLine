@@ -12,9 +12,6 @@ public class SecurityCode {
     public static int getFinalSecurityCode() {
         return FinalSecurityCode;
     }
-
-
-
 }
 
 
