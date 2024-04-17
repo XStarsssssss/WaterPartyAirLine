@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println(SecurityCode.getFinalSecurityCode());
 
         System.out.println("WELCOME TO WATERPARTY AIRLINE <3");
         System.out.println(" ________________________________________________");

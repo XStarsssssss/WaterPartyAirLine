@@ -20,7 +20,7 @@ public class Reporting {
         int securityCode = scanner.nextInt();
         scanner.nextLine();
 
-        if (securityCode != CustomerManager.getSecurityCode()) {
+        if (securityCode != SecurityCode.getFinalSecurityCode()) {
             System.out.println("Incorrect security code. Access denied.");
             System.out.println("----------------------------------------------------------------------------------------------------");
             return;
