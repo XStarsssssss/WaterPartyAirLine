@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Reporting {
 
@@ -14,8 +15,16 @@ public class Reporting {
         totalTicketsPerAirplane.put(airplaneName, totalTickets);
     }
 
-    public static void generateSalesReport() {
+    public static void generateSalesReport(Scanner scanner) {
+        System.out.println("Enter security code to generate sales report:");
+        int securityCode = scanner.nextInt();
+        scanner.nextLine();
 
+        if (securityCode != CustomerManager.getSecurityCode()) {
+            System.out.println("Incorrect security code. Access denied.");
+            System.out.println("----------------------------------------------------------------------------------------------------");
+            return;
+        }
 
         System.out.println("Total Plane : " + PlaneDetails.getTotal_Plane());
         System.out.println("XZK-678  "  );
@@ -26,14 +35,13 @@ public class Reporting {
         System.out.println("----------------------------------------------------------------------------------------------------");
         System.out.println("Airplane Name      | Total Tickets Sold     | Unsold Tickets");
         System.out.println("----------------------------------------------------------------------------------------------------");
-        for (Map.Entry <String, Integer> entry : totalTicketsSoldPerAirplane.entrySet()) {
+        for (Map.Entry<String, Integer> entry : totalTicketsSoldPerAirplane.entrySet()) {
             String airplaneName = entry.getKey();
             int ticketsSold = entry.getValue();
             int totalTickets = totalTicketsPerAirplane.getOrDefault(airplaneName, 0);
             int unsoldTickets = totalTickets - ticketsSold;
-        System.out.printf("%-20s | %-22d | %-19d%n", airplaneName, ticketsSold, unsoldTickets);
-        System.out.println("----------------------------------------------------------------------------------------------------");
-
+            System.out.printf("%-20s | %-22d | %-19d%n", airplaneName, ticketsSold, unsoldTickets);
+            System.out.println("----------------------------------------------------------------------------------------------------");
         }
     }
 }

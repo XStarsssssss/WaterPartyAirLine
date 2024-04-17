@@ -135,15 +135,15 @@ public class PlaneDetails {
 
                 switch (seatType.toLowerCase()) {
                     case "economy":
-                        SeatArrangement.displayEconomySeats();
+                        SeatArrangement.XZKdisplayEconomySeats();
                         Seat_Price = economyPrice;
                         break;
                     case "premium":
-                        SeatArrangement.displayPremiumSeats();
+                        SeatArrangement.XZKdisplayPremiumSeats();
                         Seat_Price = premiumPrice;
                         break;
                     case "first class":
-                        SeatArrangement.displayFirstClassSeats();
+                        SeatArrangement.XZKdisplayFirstClassSeats();
                         Seat_Price = firstClassPrice;
                         break;
                     default:
@@ -156,11 +156,11 @@ public class PlaneDetails {
             while (true) {
                 System.out.println("Select seat number (eg: A-1): ");
                 seatNumber = scanner.nextLine();
-                boolean isAvailable = SeatArrangement.checkSeatAvailability(seatType, seatNumber);
+                boolean isAvailable = SeatArrangement.checkSeatAvailabilityofXZK(seatType, seatNumber);
                 if (!isAvailable) {
                     System.out.println("Sorry, this seat is not available. Please choose another seat.");
                 } else {
-                    SeatArrangement.bookSeat(seatNumber);
+                    SeatArrangement.bookSeatofXZK(seatNumber);
                     break;
                 }
             }
@@ -192,7 +192,7 @@ public class PlaneDetails {
             System.out.println("Trip: YGN to MDY");
             System.out.println("Departure : " + Departure);
             System.out.println("Destination : " + Destination);
-            System.out.println("Time: " + (Departure.equalsIgnoreCase("RGN") ? "16:45pm > 17:50pm" : "19:45pm > 20:50pm"));
+            System.out.println("Time: " + (Departure.equalsIgnoreCase("YGN") ? "16:45pm > 17:50pm" : "19:45pm > 20:50pm"));
             System.out.println("Adults (12+): " + adults);
             System.out.println("Children (2-11): " + children);
             System.out.println("Infants (under 2): " + infants);
@@ -284,7 +284,7 @@ public class PlaneDetails {
                 if (Destination.equalsIgnoreCase("YGN") || Destination.equalsIgnoreCase("STW")) {
                     break;
                 }
-                System.out.println("Invalid gender! Please enter 'RGN' or 'STW'.");
+                System.out.println("Invalid gender! Please enter 'YGN' or 'STW'.");
             }
 
             System.out.println("Adults (18+): ");
@@ -327,15 +327,15 @@ public class PlaneDetails {
 
                 switch (seatType.toLowerCase()) {
                     case "economy":
-                        SeatArrangement.displayEconomySeats();
+                        SeatArrangement.ZKXdisplayEconomySeats();
                         Seat_Price = economyPrice;
                         break;
                     case "premium":
-                        SeatArrangement.displayPremiumSeats();
+                        SeatArrangement.ZKXdisplayPremiumSeats();
                         Seat_Price = premiumPrice;
                         break;
                     case "first class":
-                        SeatArrangement.displayFirstClassSeats();
+                        SeatArrangement.ZKXdisplayFirstClassSeats();
                         Seat_Price = firstClassPrice;
                         break;
                     default:
@@ -348,11 +348,11 @@ public class PlaneDetails {
             while (true) {
                 System.out.println("Select seat number (eg: A-1): ");
                 seatNumber = scanner.nextLine();
-                boolean isAvailable = SeatArrangement.checkSeatAvailability(seatType, seatNumber);
+                boolean isAvailable = SeatArrangement.checkSeatAvailabilityofZKX(seatType, seatNumber);
                 if (!isAvailable) {
                     System.out.println("Sorry, this seat is not available. Please choose another seat.");
                 } else {
-                    System.out.println("Seat " + seatNumber + " selected successfully!");
+                    SeatArrangement.bookSeatofZKX(seatNumber);
                     break;
                 }
             }
@@ -518,15 +518,15 @@ public class PlaneDetails {
 
                 switch (seatType.toLowerCase()) {
                     case "economy":
-                        SeatArrangement.displayEconomySeats();
+                        SeatArrangement.KZXdisplayEconomySeats();
                         Seat_Price = economyPrice;
                         break;
                     case "premium":
-                        SeatArrangement.displayPremiumSeats();
+                        SeatArrangement.KZXdisplayPremiumSeats();
                         Seat_Price = premiumPrice;
                         break;
                     case "first class":
-                        SeatArrangement.displayFirstClassSeats();
+                        SeatArrangement.KZXdisplayFirstClassSeats();
                         Seat_Price = firstClassPrice;
                         break;
                     default:
@@ -539,11 +539,11 @@ public class PlaneDetails {
             while (true) {
                 System.out.println("Select seat number (eg: A-1): ");
                 seatNumber = scanner.nextLine();
-                boolean isAvailable = SeatArrangement.checkSeatAvailability(seatType, seatNumber);
+                boolean isAvailable = SeatArrangement.checkSeatAvailabilityofKZX(seatType, seatNumber);
                 if (!isAvailable) {
                     System.out.println("Sorry, this seat is not available. Please choose another seat.");
                 } else {
-                    System.out.println("Seat " + seatNumber + " selected successfully!");
+                    SeatArrangement.bookSeatofKZX(seatNumber);
                     break;
                 }
             }
@@ -709,15 +709,15 @@ public class PlaneDetails {
 
                 switch (seatType.toLowerCase()) {
                     case "economy":
-                        SeatArrangement.displayEconomySeats();
+                        SeatArrangement.ZXKdisplayEconomySeats();
                         Seat_Price = economyPrice;
                         break;
                     case "premium":
-                        SeatArrangement.displayPremiumSeats();
+                        SeatArrangement.ZXKdisplayPremiumSeats();
                         Seat_Price = premiumPrice;
                         break;
                     case "first class":
-                        SeatArrangement.displayFirstClassSeats();
+                        SeatArrangement.ZXKdisplayFirstClassSeats();
                         Seat_Price = firstClassPrice;
                         break;
                     default:
@@ -730,11 +730,11 @@ public class PlaneDetails {
             while (true) {
                 System.out.println("Select seat number (eg: A-1): ");
                 seatNumber = scanner.nextLine();
-                boolean isAvailable = SeatArrangement.checkSeatAvailability(seatType, seatNumber);
+                boolean isAvailable = SeatArrangement.checkSeatAvailabilityofZXK(seatType, seatNumber);
                 if (!isAvailable) {
                     System.out.println("Sorry, this seat is not available. Please choose another seat.");
                 } else {
-                    System.out.println("Seat " + seatNumber + " selected successfully!");
+                    SeatArrangement.bookSeatofZXK(seatNumber);
                     break;
                 }
             }
@@ -839,7 +839,7 @@ public class PlaneDetails {
                 return;
             }
             System.out.println("Plane Name: " + planeName);
-            System.out.println("Trip: RGN <-> MKN");
+            System.out.println("Trip: YGN <-> MKN");
             String Departure;
             while (true) {
                 System.out.println("Departure (YGN or MKN) : ");
@@ -899,15 +899,15 @@ public class PlaneDetails {
 
                 switch (seatType.toLowerCase()) {
                     case "economy":
-                        SeatArrangement.displayEconomySeats();
+                        SeatArrangement.KXZdisplayEconomySeats();
                         Seat_Price = economyPrice;
                         break;
                     case "premium":
-                        SeatArrangement.displayPremiumSeats();
+                        SeatArrangement.KXZdisplayPremiumSeats();
                         Seat_Price = premiumPrice;
                         break;
                     case "first class":
-                        SeatArrangement.displayFirstClassSeats();
+                        SeatArrangement.KXZdisplayFirstClassSeats();
                         Seat_Price = firstClassPrice;
                         break;
                     default:
@@ -920,11 +920,11 @@ public class PlaneDetails {
             while (true) {
                 System.out.println("Select seat number (eg: A-1): ");
                 seatNumber = scanner.nextLine();
-                boolean isAvailable = SeatArrangement.checkSeatAvailability(seatType, seatNumber);
+                boolean isAvailable = SeatArrangement.checkSeatAvailabilityofKXZ(seatType, seatNumber);
                 if (!isAvailable) {
                     System.out.println("Sorry, this seat is not available. Please choose another seat.");
                 } else {
-                    System.out.println("Seat " + seatNumber + " selected successfully!");
+                    SeatArrangement.bookSeatofKXZ(seatNumber);
                     break;
                 }
             }

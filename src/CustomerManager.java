@@ -5,6 +5,7 @@ public class CustomerManager {
     private static Customer[] customers = new Customer[MAX_CUSTOMERS];
     private static int lastId = 0;
     private static int customerCount = 0;
+    private static int SecurityCode = 471471471;
 
     public static Customer createAccount(Scanner scanner) {
         System.out.println("Account Creation");
@@ -135,7 +136,21 @@ public class CustomerManager {
         }
     }
 
+    public static int getSecurityCode() {
+        return SecurityCode;
+    }
+
     public static void displayCreatedAccountsList(Scanner scanner) {
+        System.out.println("Enter security code:");
+        int securityCode = scanner.nextInt();
+        scanner.nextLine();
+
+        if (securityCode != SecurityCode) {
+            System.out.println("Incorrect security code. Access denied.");
+            System.out.println("--------------------------------------------------------");
+            return;
+        }
+
         if (customerCount == 0) {
             System.out.println("There is nothing here.");
             System.out.println("--------------------------------------------------------");
