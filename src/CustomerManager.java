@@ -131,11 +131,14 @@ public class CustomerManager {
                 customerCount--;
 
                 System.out.println("Your account has been deleted successfully!");
+                System.out.println("--------------------------------------------------------");
             } else {
                 System.out.println("Incorrect password! Please try again.");
+                System.out.println("--------------------------------------------------------");
             }
         } else {
             System.out.println("No customer found with that ID.");
+            System.out.println("--------------------------------------------------------");
         }
     }
 
